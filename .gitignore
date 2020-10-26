@@ -1,0 +1,8 @@
+#virtual env
+db_env/
+
+#dotenv
+.env
+
+#ext
+__pycache__/
