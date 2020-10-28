@@ -72,9 +72,6 @@ class League(commands.Cog):
     def __init__(self, client):
         self.client = client
 
-    def flame(self, ctx, summonername, champ):
-        ctx.channel.send(f"{summonername} is selling again on {champ}.")
-
     @commands.command(name='search')
     async def search_in_game(self, ctx, *, summonerName):
         api_key = RIOT_API_KEY
@@ -90,7 +87,7 @@ class League(commands.Cog):
                 if summonerName == participant['summonerName']:
                     champion = api.getChamp(participant['championId'])
                     print(f'{summonerName} is selling again on {champion}.')
-                    await ctx.channel.send(f"{summonerName} is selling again on {champion}.")
+                    await ctx.channel.send(f"{summonerName} is currently in game on {champion}.")
 
 
 def setup(client):
