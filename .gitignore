@@ -6,3 +6,7 @@ db_env/
 
 #ext
 __pycache__/
+
+
+#database
+database.ini
